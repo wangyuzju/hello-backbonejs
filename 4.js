@@ -43,10 +43,11 @@
       this.render();
     },
     render: function(){
+      var self = this;
       $(this.el).append("<button id='add'>Add list item</button>");
       $(this.el).append("<ul></ul>");
       _(this.collection.models).each(function(item){ // in case collection is not empty
-        appendItem(item);
+        self.appendItem(item);
       }, this);
     },
     addItem: function(){

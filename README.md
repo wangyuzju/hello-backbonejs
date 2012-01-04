@@ -11,4 +11,3 @@ in the root directory to compile the docs using [Docco](http://jashkenas.github.
 See it in action:  
 http://arturadib.github.com/hello-backbonejs/
 
-_Contributions are welcome!_

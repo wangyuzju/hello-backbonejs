@@ -34,10 +34,12 @@
       this.render();      
     },
     render: function(){
+      // Save reference to `this` so it can be accessed from within the scope of the callback below
+      var self = this;      
       $(this.el).append("<button id='add'>Add list item</button>");
       $(this.el).append("<ul></ul>");
       _(this.collection.models).each(function(item){ // in case collection is not empty
-        appendItem(item);
+        self.appendItem(item);
       }, this);
     },
     // `addItem()` now deals solely with models/collections. View updates are delegated to the `add` event listener `appendItem()` below.
