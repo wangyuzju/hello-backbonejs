@@ -99,7 +99,7 @@
   var listView = new ListView();
 })(jQuery);
 
-// <p style="background:rgb(245,245,255); padding:10px;">I tweet about coding and startups: <a target="_blank" href="http://twitter.com/arturadib">@arturadib</a> </p>
+// <div style="float:left"><img style="margin:8px; margin-right:10px;" src="https://twimg0-a.akamaihd.net/profile_images/1389031556/Artur_Adib-164x164_normal.png"/></div> <div style="background:rgb(245,245,255); padding:10px;">For more on coding and startups, follow me at:<br/> <a target="_blank" href="http://twitter.com/arturadib">@arturadib</a> </div>
 // <script>
 //   if (window.location.href.search(/\?x/) < 0) {
 //     var _gaq = _gaq || [];
