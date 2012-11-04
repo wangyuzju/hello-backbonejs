@@ -60,7 +60,7 @@
   var listView = new ListView();
 })(jQuery);
 
-// <div style="float:left; margin-bottom:40px;"><img style="width:42px; margin-right:10px;" src="https://twitter.com/images/resources/twitter-bird-light-bgs.png"/></div> <div style="background:rgb(245,245,255); padding:10px;">Follow me on Twitter: <a target="_blank" href="http://twitter.com/arturadib">@arturadib</a> </div>
+// <div style="float:left; margin-bottom:40px;"><img style="width:42px; margin-right:10px;" src="https://twitter.com/images/resources/twitter-bird-light-bgs.png"/></div> <div style="background:rgb(245,245,255); padding:10px;">Follow me on Twitter: <a target="_blank" href="http://twitter.com/ar2r">@ar2r</a> </div>
 // <script>
 //   if (window.location.href.search(/\?x/) < 0) {
 //     var _gaq = _gaq || [];

@@ -9,5 +9,5 @@ Use:
 in the root directory to compile the docs using [Docco](http://jashkenas.github.com/docco/).
 
 See it in action:  
-http://arturadib.github.com/hello-backbonejs/
+http://ar2r.github.com/hello-backbonejs/
 
