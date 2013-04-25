@@ -1,6 +1,6 @@
 // **This example illustrates how to use a Collection of Models to store data, and how to tie changes in those to a View.**
 //
-// _Working example: [3.html](../3.html)._  
+// _Working example: [3.html](../3.html)._
 // _[Go to Example 4](4.html)_
 
 //
@@ -11,8 +11,8 @@
       part1: 'hello',
       part2: 'world'
     }
-  });      
-  
+  });
+
   // **List class**: A collection of `Item`s. Basically an array of Model objects with some helper functions.
   var List = Backbone.Collection.extend({
     model: Item
@@ -26,16 +26,16 @@
     // `initialize()` now instantiates a Collection, and binds its `add` event to own method `appendItem`. (Recall that Backbone doesn't offer a separate Controller for bindings...).
     initialize: function(){
       _.bindAll(this, 'render', 'addItem', 'appendItem'); // remember: every function that uses 'this' as the current object should be in here
-      
+
       this.collection = new List();
       this.collection.bind('add', this.appendItem); // collection event binder
 
       this.counter = 0;
-      this.render();      
+      this.render();
     },
     render: function(){
       // Save reference to `this` so it can be accessed from within the scope of the callback below
-      var self = this;      
+      var self = this;
       $(this.el).append("<button id='add'>Add list item</button>");
       $(this.el).append("<ul></ul>");
       _(this.collection.models).each(function(item){ // in case collection is not empty
@@ -60,7 +60,7 @@
   var listView = new ListView();
 })(jQuery);
 
-// <div style="float:left; margin-bottom:40px;"><img style="width:42px; margin-right:10px;" src="https://twitter.com/images/resources/twitter-bird-light-bgs.png"/></div> <div style="background:rgb(245,245,255); padding:10px;">Follow me on Twitter: <a target="_blank" href="http://twitter.com/ar2r">@ar2r</a> </div>
+// <div style="float:left; margin-bottom:40px;"><img style="width:42px; margin-right:10px;" src="https://twitter.com/images/resources/twitter-bird-light-bgs.png"/></div> <div style="background:rgb(245,245,255); padding:10px;">Follow me on Twitter: <a target="_blank" href="http://twitter.com/r2r">@r2r</a> </div>
 // <script>
 //   if (window.location.href.search(/\?x/) < 0) {
 //     var _gaq = _gaq || [];

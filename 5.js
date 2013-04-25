@@ -5,28 +5,28 @@
 //
 (function($){
   // `Backbone.sync`: Overrides persistence storage with dummy function. This enables use of `Model.destroy()` without raising an error.
-  Backbone.sync = function(method, model, success, error){ 
+  Backbone.sync = function(method, model, success, error){
     success();
   }
-  
+
   var Item = Backbone.Model.extend({
     defaults: {
       part1: 'hello',
       part2: 'world'
     }
   });
-  
+
   var List = Backbone.Collection.extend({
     model: Item
   });
 
   var ItemView = Backbone.View.extend({
-    tagName: 'li', // name of tag to be created        
+    tagName: 'li', // name of tag to be created
     // `ItemView`s now respond to two clickable actions for each `Item`: swap and delete.
-    events: { 
+    events: {
       'click span.swap':  'swap',
       'click span.delete': 'remove'
-    },    
+    },
     // `initialize()` now binds model change/removal to the corresponding handlers below.
     initialize: function(){
       _.bindAll(this, 'render', 'unrender', 'swap', 'remove'); // every function that uses 'this' as the current object should be in here
@@ -46,7 +46,7 @@
     // `swap()` will interchange an `Item`'s attributes. When the `.set()` model function is called, the event `change` will be triggered.
     swap: function(){
       var swapped = {
-        part1: this.model.get('part2'), 
+        part1: this.model.get('part2'),
         part2: this.model.get('part1')
       };
       this.model.set(swapped);
@@ -56,7 +56,7 @@
       this.model.destroy();
     }
   });
-  
+
   // Because the new features (swap and delete) are intrinsic to each `Item`, there is no need to modify `ListView`.
   var ListView = Backbone.View.extend({
     el: $('body'), // el attaches to existing element
@@ -65,7 +65,7 @@
     },
     initialize: function(){
       _.bindAll(this, 'render', 'addItem', 'appendItem'); // every function that uses 'this' as the current object should be in here
-      
+
       this.collection = new List();
       this.collection.bind('add', this.appendItem); // collection event binder
 
@@ -99,7 +99,7 @@
   var listView = new ListView();
 })(jQuery);
 
-// <div style="float:left; margin-bottom:40px;"><img style="width:42px; margin-right:10px;" src="https://twitter.com/images/resources/twitter-bird-light-bgs.png"/></div> <div style="background:rgb(245,245,255); padding:10px;">Follow me on Twitter: <a target="_blank" href="http://twitter.com/ar2r">@ar2r</a> </div>
+// <div style="float:left; margin-bottom:40px;"><img style="width:42px; margin-right:10px;" src="https://twitter.com/images/resources/twitter-bird-light-bgs.png"/></div> <div style="background:rgb(245,245,255); padding:10px;">Follow me on Twitter: <a target="_blank" href="http://twitter.com/r2r">@r2r</a> </div>
 // <script>
 //   if (window.location.href.search(/\?x/) < 0) {
 //     var _gaq = _gaq || [];

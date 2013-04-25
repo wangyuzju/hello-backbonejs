@@ -1,6 +1,6 @@
 // **This example illustrates how to delegate the rendering of a Model to a dedicated View.**
 //
-// _Working example: [4.html](../4.html)._  
+// _Working example: [4.html](../4.html)._
 // _[Go to Example 5](5.html)_
 
 //
@@ -11,7 +11,7 @@
       part2: 'world'
     }
   });
-  
+
   var List = Backbone.Collection.extend({
     model: Item
   });
@@ -27,7 +27,7 @@
       return this; // for chainable calls, like .render().el
     }
   });
-  
+
   var ListView = Backbone.View.extend({
     el: $('body'), // el attaches to existing element
     events: {
@@ -35,7 +35,7 @@
     },
     initialize: function(){
       _.bindAll(this, 'render', 'addItem', 'appendItem'); // every function that uses 'this' as the current object should be in here
-      
+
       this.collection = new List();
       this.collection.bind('add', this.appendItem); // collection event binder
 
@@ -67,10 +67,10 @@
     }
   });
 
-  var listView = new ListView();      
+  var listView = new ListView();
 })(jQuery);
 
-// <div style="float:left; margin-bottom:40px;"><img style="width:42px; margin-right:10px;" src="https://twitter.com/images/resources/twitter-bird-light-bgs.png"/></div> <div style="background:rgb(245,245,255); padding:10px;">Follow me on Twitter: <a target="_blank" href="http://twitter.com/ar2r">@ar2r</a> </div>
+// <div style="float:left; margin-bottom:40px;"><img style="width:42px; margin-right:10px;" src="https://twitter.com/images/resources/twitter-bird-light-bgs.png"/></div> <div style="background:rgb(245,245,255); padding:10px;">Follow me on Twitter: <a target="_blank" href="http://twitter.com/r2r">@r2r</a> </div>
 // <script>
 //   if (window.location.href.search(/\?x/) < 0) {
 //     var _gaq = _gaq || [];
