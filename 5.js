@@ -32,7 +32,7 @@
       _.bindAll(this, 'render', 'unrender', 'swap', 'remove'); // every function that uses 'this' as the current object should be in here
 
       this.model.bind('change', this.render);
-      this.model.bind('remove', this.unrender);
+      this.model.bind('destroy', this.unrender);
     },
     // `render()` now includes two extra `span`s corresponding to the actions swap and delete.
     render: function(){
